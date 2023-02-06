@@ -3,7 +3,7 @@ epsilonApprox = 0.01
 ans = 0
 step = epsilonApprox ** 2
 numOfGuesses = 0
-while(abs(ans ** 2 - xToFindSquare) >= epsilonApprox and ans <= xToFindSquare):
+while(abs(ans ** 2 - xToFindSquare) >= epsilonApprox and ans ** 2 <= xToFindSquare):
     ans += step
     numOfGuesses += 1
 print(f'The number of guesses is {numOfGuesses}')
