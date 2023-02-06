@@ -1,4 +1,4 @@
-'''Count how many times in string s occurs the substriing 'bob'''''
+# Count how many times in string s occurs the substriing 'bob'
 s = 'azcbobobegghakl'
 substring = 'bob'
 count = 0
