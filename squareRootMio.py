@@ -14,3 +14,9 @@ else:
             low = guess
         guess = (high + low) / 2
 print(f'Your square root is: {round(guess)}')
+'''write a function that count the number of letters in a given string'''
+def countLetters(string):
+    count = 0
+    for i in string:
+        count += 1
+    return count
