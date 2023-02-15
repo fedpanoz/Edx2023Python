@@ -1,12 +1,18 @@
 balance = float(input('balance: '))
 annualInterestRate = float(input('annual interest rate: '))
-monthlyPaymentRate = float(input('monthlyPaymentRate'))
-monthlyInterest = annualInterestRate / 12
-unpaidBalance = 0
-for x in range(12):
-    unpaidBalance = (balance - (balance * monthlyPaymentRate))
-    balance = unpaidBalance + (unpaidBalance * monthlyInterest)
-roundedBalance = round(balance, 2)
-print("Remaining balance:", roundedBalance)
 
+monthlyInterestRate = annualInterestRate / 12
+monthlyPayment = 0
+originalBalance = balance
 
+while balance > 0:
+    monthlyPayment += 10
+    balance = originalBalance
+
+    for month in range(1, 13):
+        balance -= monthlyPayment
+        balance += balance * monthlyInterestRate
+        if balance <= 0:
+            break
+
+print('Lowest Payment:', monthlyPayment)
