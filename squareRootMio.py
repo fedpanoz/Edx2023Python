@@ -1,22 +1,17 @@
-# Returns the square root of a given number
-numToSquare = int(input('Tell me a number you want to square\n'))
+# Calculate the square root of a given number by the bisection algorithm
+squareToFind = int(input('Gimme an int to find its square root'))
 epsilon = 0.01
-low = 0
-high = max(1, numToSquare)
 guess = 0
-if numToSquare < 0:
-    print(f'i am sorry {numToSquare}has no square roots')
+if squareToFind < 0:
+    print('i am sorry there is no square roots for negative numbers')
 else:
-    while abs(guess ** 2 - numToSquare) > epsilon:
-        if guess ** 2 > numToSquare:
+    low = 0
+    high = max(1, squareToFind)
+    while abs(guess ** 2 - squareToFind) >= epsilon:
+        if guess ** 2 > squareToFind:
             high = guess
         else:
             low = guess
         guess = (high + low) / 2
-print(f'Your square root is: {round(guess)}')
-'''write a function that count the number of letters in a given string'''
-def countLetters(string):
-    count = 0
-    for i in string:
-        count += 1
-    return count
+
+print(f'Your square root is {guess}')

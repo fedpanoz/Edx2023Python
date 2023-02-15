@@ -6,7 +6,7 @@ secret = (high + low) // 2
 while True:
     print("Is your secret number", secret, end='')
     print("?")
-    ans =input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+    ans = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
     if ans == 'h':
         high = secret
         secret = (high + low) // 2
