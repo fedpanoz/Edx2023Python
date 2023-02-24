@@ -4,4 +4,4 @@ def gcdRecur(a, b):
         return a
     else:
         return gcdRecur(b, a % b)
-print(gcdRecur(12, 9))
+print(gcdRecur(4, 27))
