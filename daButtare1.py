@@ -1,15 +1,13 @@
-school = 'Massachusetts Institute of Technology'
-numVowels = 0
-numCons = 0
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
 
-for char in school:
-    if char == 'a' or char == 'e' or char == 'i' \
-       or char == 'o' or char == 'u':
-        numVowels += 1
-    elif char == 'o' or char == 'M':
-        print(char)
-    else:
-        numCons -= 1
+while guess <= x:
+    if abs(guess**2 -x) >= epsilon:
+        guess += step
 
-print('numVowels is: ' + str(numVowels))
-print('numCons is: ' + str(numCons)) 
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))

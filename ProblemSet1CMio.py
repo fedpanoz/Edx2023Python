@@ -5,16 +5,14 @@
 # Longest substring in alphabetical order is: abc
 
 s = 'azcbobobegghakl'
-
-max_substring = ""
-current_substring = ""
-for i in range(len(s) - 1):
-    if s[i] <= s[i + 1]:
-        current_substring += s[i]
-    else:
-        current_substring += s[i]
-        if len(current_substring) > len(max_substring):
-            max_substring = current_substring
-        current_substring = ""
-
-print("Longest substring in alphabetical order is: " + max_substring)
+longestSubstr = ''
+for i in range(len(s)):
+    newSubstr = s[i]
+    for y in range((i + 1), len(s)):
+        if s[y] >= s[y - 1]:
+            newSubstr += s[y]
+        else:
+            break
+    if len(newSubstr) >= len(longestSubstr):
+        longestSubstr = newSubstr
+print(longestSubstr)
