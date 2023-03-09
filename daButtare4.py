@@ -1,6 +1,5 @@
-a = ['bob', 'marta', 'paolo']
-b = ['bob', 'marta', 'paolo']
-print(a == b)
-print(a is b)
-x = [6, 3, 12, 5, ]
-
+sequence = ['a', 'b', 'c', 'a', 'b', 'a']
+freq = {}
+for x in sequence:
+    freq[x] = freq.get(x, 0) + 1
+print(freq)
