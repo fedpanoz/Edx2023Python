@@ -1,12 +1,10 @@
-def isWordGuessed(secretWord, lettersGuessed):
-    '''
-    secretWord: string, the word the user is guessing
-    lettersGuessed: list, what letters have been guessed so far
-    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
-      False otherwise
-    '''
-    # FILL IN YOUR CODE HERE...
-    for letter in secretWord:
-        if letter not in lettersGuessed:
-            return False
-    return True
+"""
+Write a function that accepts either one or two ints as arguments.If called with two arguments, the function prints
+the product ot the two arguments.If called with one argument, it prints that argument
+"""
+def product(x, y=1):  # y=1 is the default value
+    return x * y
+print(product(2, 3))
+print(product(2))
+#
+
