@@ -29,7 +29,7 @@ def words_often(freqs, minTimes):
     while not done:
         temp = most_common_words(freqs)
         if temp[1] >= minTimes:
-            result.append(temp)
+            result.append(temp) 
             for w in temp[0]:
                 del(freqs[w])
         else:
@@ -37,4 +37,4 @@ def words_often(freqs, minTimes):
     return result
 
 #print(words_often(beatles, 5))
-print(most_common_words(beatles))
+print(type(most_common_words(beatles)))
